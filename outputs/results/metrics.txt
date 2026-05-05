@@ -1,0 +1,52 @@
+
+==============================================
+  MACHINE LEARNING MODEL EVALUATION REPORT
+==============================================
+
+Task           : Binary Classification
+Model          : Decision Tree Classifier (max_depth=5)
+Target Column  : Learning_Mode (Online=1, Offline=0)
+
+--- Metrics ---
+Accuracy  : 0.5250
+Precision : 0.6000
+Recall    : 0.1500
+
+--- Confusion Matrix ---
+              Predicted Offline    Predicted Online
+Actual Offline       90                    10
+Actual Online        85                    15
+
+--- Full Classification Report ---
+              precision    recall  f1-score   support
+
+     Offline       0.51      0.90      0.65       100
+      Online       0.60      0.15      0.24       100
+
+    accuracy                           0.53       200
+   macro avg       0.56      0.53      0.45       200
+weighted avg       0.56      0.53      0.45       200
+
+
+--- Explanation in Plain Words ---
+* Machine Learning Task: Binary classification — predict whether a student
+  learns Online or Offline based on study habits and performance metrics.
+
+* Model Used: Decision Tree Classifier with max_depth=5.
+
+* How well did it perform?
+  Accuracy of 52.5% means the model correctly predicted the learning
+  mode for about 105 out of 200 test students.
+
+* Metrics used: Accuracy, Precision, Recall, and Confusion Matrix.
+
+* Did the model make many mistakes?
+  The confusion matrix shows 95 total misclassifications out of
+  200 test samples.
+
+* What could improve the model?
+  - Collecting more features (e.g., student age, location, device used)
+  - Trying Random Forest or Logistic Regression for comparison
+  - Hyperparameter tuning (e.g., varying max_depth, min_samples_split)
+  - Feature engineering (e.g., interaction terms between Focus and Study_Hours)
+==============================================
